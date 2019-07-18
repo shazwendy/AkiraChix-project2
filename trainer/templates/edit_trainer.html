@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>Trainer </title>
+</head>
+<body>
+<div class="container">
+<div class="d-flex justify-content-center">
+<div class="bg-warning w-50  ">
+<h2 class="ml-5">Trainer</h2>
+<div class="col-md-4"
+<form method="POST">{%csrf_token%}
+
+{{ form.as_p }}
+<label class=""></label>
+
+<form action="/action_page.php">
+  	<div class="form-group">
+      <label for="first name">First Name:</label>
+      <input type="first name" class="form-control" id="first name" placeholder="Enter First Name" name=" first name">
+    </div>
+
+    <form action="/action_page.php">
+  	<div class="form-group">
+      <label for="last name">Last Name:</label>
+      <input type="last name" class="form-control" id="last name" placeholder="Enter last name" name="last name">
+    </div>
+
+    <form action="/action_page.php">
+  	<div class="form-group">
+      <label for="gender">Gender:</label>
+      <input type="gender" class="form-control" id="gender" placeholder="Enter gender" name="gender">
+    </div>
+
+     <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+
+    <form action="/action_page.php">
+  	<div class="form-group">
+      <label for="course teaching">Course Teaching:</label>
+      <input type="course teaching" class="form-control" id="course teaching" placeholder="Enter course teaching" name="course teaching">
+    </div>
+
+    <form action="/action_page.php">
+  	<div class="form-group">
+      <label for="Phone number">Phone number:</label>
+      <input type="Phone number" class="form-control" id="Phone number" placeholder="Enter Phone number" name="Phone number">
+    </div>
+
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+
+<button type="submit" name="SUBMIT" class="btn btn-lg btn-primary" >SUBMIT</button>
+
+ </form>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+<!-- <h2> Add a new trainer </h2> -->
+
+<form method="POST"> {%csrf_token%}
+	{{ form.as_p }}
+	<!-- <button type = "submit">Add</button> -->
+	<!-- <input type="submit"> Add trainer </input> -->
+
+</form>

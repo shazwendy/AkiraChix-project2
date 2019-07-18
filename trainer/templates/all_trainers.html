@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title> Trainers</title>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<table class="table table-striped table-bordered">
+
+		<h3>TRAINERS TABLE</h3>
+		<button><a href="/trainer/add">add a new trainer</a></button>
+	
+<thead>
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Gender</th>
+		<th>Course Teaching</th>
+		<th>Details</th>
+		<th>Edit</th>
+
+	</tr>
+	</thead>
+
+	<tbody>
+
+
+
+	{% for trainer in trainers %}
+	<tr>
+		<td>{{ trainer.first_name }}</td>
+		<td>{{ trainer.last_name }}</td>
+		<td>{{ trainer.gender }}</td>
+		<td>{{ trainer.course_teaching }}</td>
+		<td><a href="/student/view/{{trainer.pk}}/">View more</a></td>
+		<td><a href="/student/edit/{{trainer.pk}}/">Edit trainer</a></td>
+
+
+	</tr>
+		{% endfor %}
+
+
+		</tbody>
+		
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- twiga foods
+threeways.co.ke
+pezesha
+brave -->
+
+
+<!-- 
+first_name="Sharon" toget it to be case sensitive(to allow small and caaps) 
+use i contains e.g first_name__icontains="Sharon"
+ -->
