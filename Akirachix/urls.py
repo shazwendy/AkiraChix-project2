@@ -22,6 +22,9 @@ urlpatterns = [
     path("trainer/", include("trainer.urls")),
     path("course/", include("course.urls")),
     path("api/", include("api.urls")),
+    path("", include("core.urls")),
+    # path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("registration.backends.default.urls")),
 ]
 
 # if settings.DEBUG:
