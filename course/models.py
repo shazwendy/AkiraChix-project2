@@ -1,6 +1,7 @@
 from django.db import models
 
-
+import datetime
+from django.core.exceptions import ValidationError
 from trainer.models import Trainer
 trainer = models.ForeignKey(Trainer,null=True,on_delete=models.CASCADE)
 

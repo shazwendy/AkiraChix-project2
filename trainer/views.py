@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import  HttpResponse
+
 from django.shortcuts import redirect
 
 from .forms import TrainerForm
@@ -8,9 +10,13 @@ from .models import Trainer
 def add_trainer(request):
 	if request.method == "POST":
 		form = TrainerForm(request.POST)
-		if form.is_valid:
+		if form.is_valid():
 			form.save()
-			return redirect("list_trainers")
+			# return redirect("list_trainers")
+			return HttpResponse("valid data",status = 200)
+
+		else:
+			return HttpResponse("invalid data",status = 400)
 
 	else:
 		form = Trainer()

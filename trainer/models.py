@@ -1,4 +1,6 @@
 from django.db import models
+import datetime
+from django.core.exceptions import ValidationError
 
 
 class Trainer(models.Model):
@@ -7,7 +9,7 @@ class Trainer(models.Model):
   date_joined = models.DateField()
   gender = models.CharField(max_length = 20)
   trainer_number = models.CharField(max_length = 20)
-  email = models.CharField(max_length = 70)
+  email = models.EmailField(max_length = 70)
   phone_number = models.CharField(max_length = 15)
   course_teaching = models.CharField(max_length = 20)
 

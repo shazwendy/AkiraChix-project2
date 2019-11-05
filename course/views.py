@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import  HttpResponse
 
 from .forms import CourseForm
 from .models import Course
@@ -7,10 +8,13 @@ from .models import Course
 def add_course(request):
 	if request.method == "POST":
 		form = CourseForm(request.POST)
-		if form.is_valid:
+		if form.is_valid():
 			form.save()
-			return redirect("list_courses")
+			# return redirect("list_courses")
+			return HttpResponse("valid data",status = 200)
 
+		else:
+			return HttpResponse("invalid data",status = 400)
 
 	else:
 		form = Course()
